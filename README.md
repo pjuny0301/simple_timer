@@ -31,7 +31,7 @@ auto c = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
 /*작업 4*/
 auto d = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
 
-t.end();
+t.stop();
 ```
 
-end를 호출하면 end - start가 고정됩니다. 실생활에서도 타이머가 멈추면 더이상 증가하지 않기 때문에 직관성을 위해서 이렇게 설계했습니다.  
+stop을 호출하면 end - start가 고정됩니다. 실생활에서도 타이머가 멈추면 더이상 증가하지 않기 때문에 직관성을 위해서 이렇게 설계했습니다.  
