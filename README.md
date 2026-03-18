@@ -15,10 +15,23 @@ auto a = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
 auto b = t.elapsed_time<nrx::timer::microseconds, long long>(); // long long us
 auto c = t.elapsed_time<nrx::timer::milliseconds, double>();    // double ms
 auto d = t.elapsed_time<nrx::timer::seconds, double>();         // double s
-```  
+```
+혹은 elapsed_time을 끼워넣을 수 있습니다  
+  
+```cpp
+nrx::timer t;
+t.start();
 
-```cpp  
-```  
+/*작업 1*/
+auto a = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
+/*작업 2*/
+auto b = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
+/*작업 3*/
+auto c = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
+/*작업 4*/
+auto d = t.elapsed_time<nrx::timer::milliseconds, int>();       // int ms
 
-```cpp  
-```  
+t.end();
+```
+
+end를 호출하면 end - start가 고정됩니다. 타이머가 멈추면 더이상 증가하지 않기 때문에 직관성을 위해서 이렇게 설계했습니다.  
