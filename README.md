@@ -1,6 +1,6 @@
 # simple_timer  
 ## 기능  
-간단한 성능측정용 타이머입니다. 성능측정에 자주 사용되는 std::chrono::steady_clock을 사용했습니다.
+간단한 타이머입니다.  
 
 ## 사용법  
 ```cpp
