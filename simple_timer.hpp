@@ -22,7 +22,7 @@ namespace nrx {
                 point = clock::now();
             }
 
-            void end() {
+            void stop() {
                 if (is_running) {
                     dur = clock::now() - point;
                     is_running = false;
